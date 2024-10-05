@@ -1,6 +1,5 @@
 import { postRouter } from "~/server/api/routers/post";
 import { createCallerFactory, createTRPCRouter } from "~/server/api/trpc";
-import { portfolio } from "~/server/db/schema";
 import { portfolioRouter } from "~/server/api/routers/portfolio";
 
 /**

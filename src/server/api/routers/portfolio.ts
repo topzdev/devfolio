@@ -94,7 +94,9 @@ export const portfolioRouter = createTRPCRouter({
     )
     .mutation(async ({ ctx, input }) => {
 
-        // const mobile_image = await cloudinary.uploader.rename(input.mobile_image_id,  )
+    const mobile_image = await cloudinary.uploader.rename(input.mobile_image_id,  input.mobile_image_id, {
+
+    })
         
 
      await ctx.db.transaction(async (tx) => {

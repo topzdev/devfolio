@@ -4,6 +4,7 @@ import { Fira_Code } from "next/font/google";
 import { type Metadata } from "next";
 
 import { TRPCReactProvider } from "~/trpc/react";
+import AppNavbar from "~/components/layout/AppNavbar";
 
 export const metadata: Metadata = {
   title: "Devfolio",
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${firaCode.className}`}>
       <body>
+        <AppNavbar/>
         <TRPCReactProvider>{children}</TRPCReactProvider>
       </body>
     </html>

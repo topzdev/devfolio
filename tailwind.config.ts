@@ -4,8 +4,14 @@ import { fontFamily } from "tailwindcss/defaultTheme";
 export default {
   darkMode: ["class"],
   content: ["./src/**/*.tsx"],
+
   theme: {
     extend: {
+      container: {
+        center: true,
+        screens: {
+        }
+      },
       fontFamily: {
         sans: ["var(--font-geist-sans)", ...fontFamily.sans],
       },
@@ -55,7 +61,9 @@ export default {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
         },
-        border: "hsl(var(--border), <alpha-value>)",
+        border: {
+          DEFAULT: "hsl(var(--border))"
+        },
         input: {
           default:  "hsl(var(--input), <alpha-value>)",
           placeholder:  "hsl(var(--input-placeholder), <alpha-value>)",

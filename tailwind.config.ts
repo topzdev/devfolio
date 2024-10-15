@@ -10,18 +10,18 @@ export default {
       container: {
         center: true,
         padding: {
-          DEFAULT: '16px',
-          lg: '16px',
-          '2xl': '0'
+          DEFAULT: "16px",
+          lg: "16px",
+          "2xl": "0",
         },
         screens: {
-          xs: '550px',
-          sm: '640px',
-          md: '768px',
-          lg: '1024px',
-          xl: '1240px',
-          '2xl': '1800px'
-        }
+          xs: "550px",
+          sm: "640px",
+          md: "768px",
+          lg: "1024px",
+          xl: "1240px",
+          "2xl": "1800px",
+        },
       },
       fontFamily: {
         sans: ["var(--font-geist-sans)", ...fontFamily.sans],
@@ -73,12 +73,12 @@ export default {
           foreground: "hsl(var(--destructive-foreground))",
         },
         border: {
-          DEFAULT: "hsl(var(--border))"
+          DEFAULT: "hsl(var(--border))",
         },
         input: {
-          default:  "hsl(var(--input), <alpha-value>)",
-          placeholder:  "hsl(var(--input-placeholder), <alpha-value>)",
-          label:  "hsl(var(--input-label), <alpha-value>)",
+          default: "hsl(var(--input), <alpha-value>)",
+          placeholder: "hsl(var(--input-placeholder), <alpha-value>)",
+          label: "hsl(var(--input-label), <alpha-value>)",
         },
         ring: "hsl(var(--ring))",
         chart: {
@@ -91,5 +91,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("@tailwindcss/typography"), require("tailwindcss-animate")],
 } satisfies Config;

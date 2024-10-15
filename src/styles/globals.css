@@ -398,7 +398,7 @@
   }
 
   .typo-p {
-    @apply leading-7 text-base;
+    @apply leading-normal text-base;
   }
 
   .typo-p-ui {

@@ -7,7 +7,7 @@ import {cn} from "~/lib/utils";
 
 export const inputStyling = ({ error }: Pick<InputProps, "error">) => {
     return [
-        "flex border border-border bg-input w-full rounded-md px-3.5 md:px-5 py-3 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-foreground-secondary disabled:cursor-not-allowed disabled:opacity-50 text-sm md:text-base",
+        "flex border border-border bg-input w-full rounded-md px-3.5 md:px-4 py-3 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-foreground-secondary disabled:cursor-not-allowed disabled:opacity-50 text-sm md:text-base",
         error && "bg-red-500/10 border-red-500 !ring-red-500",
     ];
 };
@@ -50,7 +50,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
                 <div
                     className={cn(
                         inputStyling({ error }),
-                        "h-[48px] md:h-[52px] md:px-3 !py-0 gap-x-1.5 items-center",
+                        "h-[48px] md:h-[48px] md:px-3 !py-0 gap-x-1.5 items-center",
                         inputParentClassName,
                     )}
                 >

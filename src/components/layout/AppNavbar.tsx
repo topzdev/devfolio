@@ -7,6 +7,7 @@ import { Input } from "~/components/ui/input";
 import MaterialSymbolsSearchRounded from "~/components/icons/MaterialSymbolsSearchRounded";
 import AppLogo from "~/components/layout/AppLogo";
 import MaterialSymbolsCloseRounded from "~/components/icons/MaterialSymbolsCloseRounded";
+import Container from "~/components/layout/Container";
 
 type Props = {
   children?: React.ReactNode;
@@ -28,11 +29,11 @@ const AppNavbar = (props: Props) => {
   return (
     <header
       className={
-        "sticky left-0 top-0 flex w-full flex-col gap-y-4 border-b border-border px-5 py-4 lg:px-[60px] lg:py-6"
+        "sticky left-0 top-0 flex w-full flex-col gap-y-4 border-b border-border py-4 lg:py-5 bg-background z-[9998]"
       }
     >
-      <div
-        className={"relative mx-auto flex w-full max-w-[1860px] items-center"}
+      <Container
+        className={"relative flex w-full  items-center"}
       >
         <div className={"flex items-center gap-x-2 lg:gap-x-4"}>
           <Button
@@ -91,10 +92,10 @@ const AppNavbar = (props: Props) => {
             </li>
           </ul>
         </div>
-      </div>
+      </Container>
 
       {search && (
-        <div className={"flex w-full items-center gap-x-2"}>
+        <Container className={"flex w-full items-center gap-x-2"}>
           <Input
             className={"w-full"}
             rightAdornment={
@@ -114,11 +115,11 @@ const AppNavbar = (props: Props) => {
           >
             <MaterialSymbolsCloseRounded />
           </Button>
-        </div>
+        </Container>
       )}
 
       {menu && (
-        <div className={"w-full"}>
+        <Container className={"w-full"}>
           <ul className={"flex w-full flex-col gap-y-2"}>
             <li>
               <Button className={"w-full justify-start px-0"} asChild variant={"link"}>
@@ -131,7 +132,7 @@ const AppNavbar = (props: Props) => {
               </Button>
             </li>
           </ul>
-        </div>
+        </Container>
       )}
     </header>
   );

@@ -5,6 +5,7 @@ import { type Metadata } from "next";
 
 import { TRPCReactProvider } from "~/trpc/react";
 import AppNavbar from "~/components/layout/AppNavbar";
+import AppFooter from "~/components/layout/AppFooter";
 
 export const metadata: Metadata = {
   title: "Devfolio",
@@ -21,7 +22,10 @@ export default function RootLayout({
     <html lang="en" className={`${firaCode.className}`}>
       <body>
         <AppNavbar/>
-        <TRPCReactProvider>{children}</TRPCReactProvider>
+        <main className={'min-h-screen'}>
+          <TRPCReactProvider>{children}</TRPCReactProvider>
+        </main>
+        <AppFooter/>
       </body>
     </html>
   );
